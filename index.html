@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Title>Welcome to Camp Flabanabba</Title></Title>
+    <link rel="stylesheet" href="styles.css">
+    <body onload="startTime()">
+
+        <h2 class="time">Local Time</h2>
+        <style>
+            h2{
+                text-align: left;
+            }
+        </style>
+        
+        <div id="txt"></div>
+        
+        <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+    </head>
+<body>
+    <header>
+        <img src="/Users/Shund/Downloads/clean-energy-tree-icon-copy-9.png" alt="green tree logo" height="80">
+        <h2><b>Camp Flabanabba</b></h2>
+        <h1><i>Where Fun Meets Nature!</i></h3>
+    </header>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="home.html" class="current">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="events.html">Events</a>
+            <ul>
+                <li><a href="rafting.html">Rafting</a></li>
+                <li><a href="camping.html">Camping</a></li>
+            </ul>
+          </ul>
+    </nav>
+    <body>
+        <div class="slider">
+        </div>
+        <div id="txt"></div>
+    </body>
+    <style>
+        #nav_menu ul li a {
+    display: block;
+    width: 635px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: white;
+    color: green;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+}
+.time{
+    text-align: left;
+}
+    </style>
+</body>
+<footer>Shundarion Merritt</footer>
+</html>
